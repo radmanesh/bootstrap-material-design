@@ -2425,6 +2425,55 @@ h6 {
             0px 0px 0 0px inset;
   }
 }
+.form-control-wrapper .floating-label {
+  right: 0px;
+  left: auto;
+}
+.form-control-wrapper .material-input:before {
+  left: auto;
+  right: 0;
+}
+.form-control-wrapper .material-input:after {
+  left: auto;
+  right: 0;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+}
+@keyframes input-highlight {
+  0% {
+    right: 20%;
+    left: auto;
+  }
+  99% {
+    right: 0;
+    left: auto;
+  }
+}
+.list-group .list-group-item .row-picture,
+.list-group .list-group-item .row-action-primary {
+  float: right;
+  padding-left: 16px;
+}
+.list-group .list-group-item .row-picture label,
+.list-group .list-group-item .row-action-primary label {
+  margin-right: 7px;
+  margin-left: -7px;
+}
+.list-group .list-group-item .row-content .action-secondary {
+  left: 16px;
+}
+.list-group .list-group-item .row-content .least-content {
+  left: 16px;
+  right: auto;
+}
+.list-group .list-group-separator:before {
+  float: left;
+}
 .dropdown-menu {
   box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.26);
+}
+#snackbar-container {
+  right: 20px;
+  left: auto !important;
 }

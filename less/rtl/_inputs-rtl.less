@@ -1,0 +1,32 @@
+// main: material.less
+
+.form-control-wrapper {
+
+    .form-control:focus, .form-control.focus {
+    }
+
+    .floating-label {
+        right: 0px;
+        left: auto;
+    }
+    .material-input:before {
+        left: auto;
+        right: 0;
+    }
+    .material-input:after {
+        left: auto;
+        right: 0;
+        transform-origin: right;
+    }
+}
+
+@keyframes input-highlight {
+    0% {
+        right: 20%;
+        left: auto; //todo: not sure
+    }
+    99% {
+        right: 0;
+        left: auto //todo: not sure
+    }
+}

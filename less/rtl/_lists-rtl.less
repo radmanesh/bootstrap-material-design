@@ -1,0 +1,41 @@
+// main: material.less
+.list-group {
+    .list-group-item {
+        .row-picture, .row-action-primary {
+            float: right;
+            padding-left: 16px;
+            img, i, label {
+            }
+            img {
+                &.circle {
+                }
+            }
+            i {
+            }
+            label {
+                margin-right: 7px;
+                margin-left: -7px;
+            }
+        }
+        .row-content {
+            .action-secondary {
+                left: 16px;
+                i {
+                }
+            }
+            .action-secondary  ~ * {
+            }
+            .least-content {
+                left: 16px;
+                right: auto;
+            }
+        }
+        .list-group-item-heading {
+        }
+    }
+    .list-group-separator {
+        &:before {
+            float: left;
+        }
+    }
+}

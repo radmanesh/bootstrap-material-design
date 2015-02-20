@@ -1,16 +1,17 @@
 {
-  "name": "Material Design for Bootstrap",
+  "name": "bootstrap-material-rtl",
   "version": "0.1.2",
-  "homepage": "http://fezvrasta.github.io/bootstrap-material-design",
+  "description": "Material Design RTL for Bootstrap",
+  "homepage": "http://radmanesh.github.io/bootstrap-material-design",
   "authors": [
-    "Federico Zivolo <info@mywebexpression.com>"
+    "Arman Radmanesh <radmanesh@gmail.com>"
   ],
-  "description": "Material Design theme for Bootstrap 3",
   "main": [
     "dist/css/material.css",
     "dist/js/material.js",
     "dist/css/ripples.css",
-    "dist/js/ripples.js"
+    "dist/js/ripples.js",
+    "dist/css/material-rtl.css"
   ],
   "ignore": [
     "test",
@@ -30,9 +31,11 @@
     "bootstrap",
     "theme",
     "google",
-    "android"
+    "android",
+    "persian",
+    "farsi"
   ],
-  "license": "https://github.com/FezVrasta/bootstrap-material-design/blob/master/LICENSE.md",
+  "license": "https://github.com/radmanesh/bootstrap-material-design/blob/master/LICENSE.md",
   "ignore": [
     "**/.*",
     "node_modules",
