@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 // Will run the jshint and test:unit tasks at every commit
                 "pre-commit": "less autoprefixer cssmin uglify copy newer:jshint jasmine:scripts"
             }
-        }, 
+        },
 
         sass: {
             compilesass: {
@@ -96,13 +96,12 @@ module.exports = function(grunt) {
             options: {
                 port: 8040,
                 hostname: "localhost",
-                livereload: 35729
-
+                livereload: 35729,
             },
             livereload: {
                 options: {
                     open: true,
-                    base: "."
+                    base: [".","./rtl/"],
                 }
             },
             test: {
@@ -168,6 +167,7 @@ module.exports = function(grunt) {
                     livereload: "<%= connect.options.livereload %>"
                 },
                 files: [
+                    "rtl/index-rtl.html",
                     "index.html",
                     "dist/css/**/*.css",
                     "**/*.{png,jpg,jpeg,gif,webp,svg}"
