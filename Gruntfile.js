@@ -13,6 +13,7 @@ module.exports = function(grunt) {
                 files: {
                     "dist/css/material.css": "less/material.less",
                     "dist/css/material-wfont.css": "less/material-wfont.less",
+                    "dist/css/material-rtl.css": "less/material-rtl.less",
                     "dist/css/ripples.css": "less/ripples.less"
                 }
             }
@@ -43,6 +44,7 @@ module.exports = function(grunt) {
                 files: {
                     "dist/css/material.css": "dist/css/material.css",
                     "dist/css/material-wfont.css": "dist/css/material-wfont.css",
+                    "dist/css/material-rtl.css": "dist/css/material-rtl.css",
                     "dist/css/ripples.css": "dist/css/ripples.css"
                 }
             }
@@ -90,18 +92,25 @@ module.exports = function(grunt) {
                 flatten: true,
                 filter: "isFile"
             }
+            //,
+            // distrtl: {
+            //     expand: true,
+            //     cwd: "assets/",
+            //     src: "**",
+            //     dest: "dist/assets/"
+            // }
         },
 
         connect: {
             options: {
                 port: 8040,
                 hostname: "localhost",
-                livereload: 35729,
+                livereload: 35729
             },
             livereload: {
                 options: {
                     open: true,
-                    base: [".","./rtl/"],
+                    base: "."
                 }
             },
             test: {
@@ -120,6 +129,8 @@ module.exports = function(grunt) {
                 specs: "test/*Spec.js",
                 helpers: "test/*Helper.js",
                 vendor: [
+                    //"assets/js/jquery.min.js",
+                    //"assets/js/bootstrap.min.js"
                     "https://code.jquery.com/jquery-1.10.2.min.js",
                     "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
                 ]
@@ -167,7 +178,7 @@ module.exports = function(grunt) {
                     livereload: "<%= connect.options.livereload %>"
                 },
                 files: [
-                    "rtl/index-rtl.html",
+                    "index-rtl.html",
                     "index.html",
                     "dist/css/**/*.css",
                     "**/*.{png,jpg,jpeg,gif,webp,svg}"

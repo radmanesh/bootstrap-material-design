@@ -1,0 +1,125 @@
+
+.form-horizontal .checkbox {
+    //padding-top: 20px;
+}
+.checkbox {
+    label {
+        padding-right: 10px;
+        span {
+            right: 0px;
+        }
+        .check {
+            right: -3px;
+        }
+        .check:after {
+            right: -5px;
+        }
+        .check:before {
+            margin-right: 10px;
+        }
+    }
+    // following rules have default properties
+    input[type=checkbox]:checked ~ .check:before {
+        box-shadow:
+            0 0 0 10px,
+            10px -10px 0 10px,
+            32px 0px 0 20px,
+            0px 32px 0 20px,
+            -5px 5px 0 10px,
+            20px -12px 0 11px;
+    }
+
+    input[type=checkbox][disabled] ~ .check:after {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes checkbox-on {
+    0% {
+        box-shadow:
+            0 0 0 10px,
+            10px -10px 0 10px,
+            32px 0px 0 20px,
+            0px 32px 0 20px,
+            -5px 5px 0 10px,
+            15px 2px 0 11px;
+    }
+    50% {
+        box-shadow:
+            0 0 0 10px,
+            10px -10px 0 10px,
+            32px 0px 0 20px,
+            0px 32px 0 20px,
+            -5px 5px 0 10px,
+            20px 2px 0 11px;
+    }
+    100% {
+        box-shadow:
+            0 0 0 10px,
+            10px -10px 0 10px,
+            32px 0px 0 20px,
+            0px 32px 0 20px,
+            -5px 5px 0 10px,
+            20px -12px 0 11px;
+    }
+}
+@keyframes checkbox-off {
+    0% {
+        box-shadow:
+            0 0 0 10px,
+            10px -10px 0 10px,
+            32px 0px 0 20px,
+            0px 32px 0 20px,
+            -5px 5px 0 10px,
+            20px -12px 0 11px,
+            0 0 0 0 inset;
+    }
+
+    25% {
+        box-shadow:
+            0 0 0 10px,
+            10px -10px 0 10px,
+            32px 0px 0 20px,
+            0px 32px 0 20px,
+            -5px 5px 0 10px,
+            20px -12px 0 11px,
+            0 0 0 0 inset;
+    }
+    50% {
+        transform: rotate(45deg);
+        margin-right: 6px;
+        box-shadow:
+            0 0 0 10px,
+            10px -10px 0 10px,
+            32px 0px 0 20px,
+            0px 32px 0 20px,
+            -5px 5px 0 10px,
+            15px 2px 0 11px,
+            0 0 0 0 inset;
+    }
+    51% {
+        transform: rotate(0deg);
+        margin-right: -2px;
+
+        box-shadow:
+            0 0 0 0,
+            0 0 0 0,
+            0 0 0 0,
+            0 0 0 0,
+            0 0 0 0,
+            0 0 0 0,
+            0px 0px 0 10px inset;
+    }
+    100% {
+        transform: rotate(0deg);
+        margin-right: -2px;
+        box-shadow:
+            0 0 0 0,
+            0 0 0 0,
+            0 0 0 0,
+            0 0 0 0,
+            0 0 0 0,
+            0 0 0 0,
+            0px 0px 0 0px inset;
+    }
+}
